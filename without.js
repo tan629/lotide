@@ -1,10 +1,10 @@
 const assertArraysEqual = function(arr1, arr2) {
 
     if(eqArrays(arr1,arr2)) {
-        console.log("✅ Assertion Passed - arrays are identical : ", arr1 + " === " + arr2);
+        console.log("✅ Assertion Passed - arrays are identical : [" + arr1 + "] === [" + arr2 + "]");
     }
     else {
-        console.log("🛑 Assertion Failed - arrays are not identical : ", arr1 + " !== " + arr2);
+        console.log("🛑 Assertion Failed - arrays are not identical : [" + arr1 + "] !== [" + arr2 + "]");
     }
 }
 
@@ -46,7 +46,7 @@ without(words, ["lighthouse"]); // no need to capture return value for this test
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
-console.log(without([1, 2, 3], [1]));
+console.log(assertArraysEqual(without([1, 2, 3], [1]),[2,3]));
  // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2
+console.log(assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]),["1","2"])); 
 
