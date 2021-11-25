@@ -9,7 +9,8 @@ const countOnly = require('./countOnly');
 const assertEqual = require('./assertEqual');
 const assertArraysEqual = require('./assertArraysEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');
-
+const takeUntil = require('./takeUntil');
+const without = require('./without');
 
 module.exports = {
   head,
@@ -22,5 +23,7 @@ module.exports = {
   countOnly,
   assertArraysEqual,
   assertEqual,
-  assertObjectsEqual
+  assertObjectsEqual,
+  takeUntil,
+  without
 };

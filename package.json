@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@tan629/lotide",
   "version": "1.0.0",
   "description": "Lotide library - a smaller version of lodash library to be built incrementally as an exercise in week 1",
   "main": "assertArraysEqual.js",
@@ -100,7 +100,7 @@
     "type": "git",
     "url": "git+https://github.com/tan629/lotide.git"
   },
-  "author": "",
+  "author": "Tanimul Amin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tan629/lotide/issues"

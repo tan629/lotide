@@ -1,3 +1,5 @@
+//A function that takes in an array and returns middle most element of the array.
+
 const middle = function(arr) {
 
   let res = [];

@@ -1,53 +1,19 @@
-const assertArraysEqual = function(arr1, arr2) {
-
-    if(eqArrays(arr1,arr2)) {
-        console.log("✅ Assertion Passed - arrays are identical : [", arr1 + "] === [" + arr2 + "]");
-    }
-    else {
-        console.log("🛑 Assertion Failed - arrays are not identical : [", arr1 + "] !== [" + arr2 + "]");
-    }
-}
-
-function eqArrays(arr1, arr2) {
-
-    if(arr1.length === 0 && arr2.length === 0) return true;
-
-    if(arr1.length !== arr2.length) {
-        return false;
-    }
-
-    for(i = 0; i < arr1.length; i++) {
-
-        if(arr1[i] !== arr2[i])
-            return false;
-    }
-
-    return true;
-
-}
+//A function that takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
 
 const takeUntil = function(array, callback) {
 
-    const res = [];
+  const res = [];
 
-    for(let i of array) {
+  for (let i of array) {
 
-        if(callback(i)){
-            break;
-        }
-
-        res.push(i);
+    if (callback(i)) {
+      break;
     }
 
-    return res;
-}
+    res.push(i);
+  }
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-console.log(assertArraysEqual(results1,[1,2,5,7,2]));
+  return res;
+};
 
-console.log('---');
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(assertArraysEqual(results2,[ 'I\'ve', 'been', 'to', 'Hollywood' ]));
+module.exports = takeUntil;
