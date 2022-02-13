@@ -30,7 +30,7 @@ The following functions are currently implemented:
 A function that takes in a source array and an itemsToRemove arrays and 
 returns only the items from the source array that are not in the itemsToRemove array.
 
-*`takeUntil(array, callback)`: 
+* `takeUntil(array, callback)`: 
 A function that takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
 
 * `middle(arr)`: 
